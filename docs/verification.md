@@ -18,11 +18,11 @@
 - [`screenshots/02-dry-run.png`](screenshots/02-dry-run.png): automatic detection and explicit preview-script planning.
 - [`screenshots/03-react-vite.png`](screenshots/03-react-vite.png): real dependency installation and running development server.
 
-`scripts/capture-demo.ps1` uses the Windows `PrintWindow` API to capture only the console it created, including when other applications cover it. It does not render simulated terminal output. The local archive mode is explicit in the screenshot; the public GitHub download was **not** claimed as verified while the repository was empty.
+`scripts/capture-demo.ps1` uses the Windows `PrintWindow` API to capture only the console it created, including when other applications cover it. It does not render simulated terminal output. The local archive mode is explicit in the installer screenshot because it was captured before the first GitHub push. The React/Vite screenshot is the installed CLI running the real demo.
 
-## Make the public installer live
+## Public distribution
 
-The reviewed files were committed and pushed to `main` at `https://github.com/xonix97/run` in commit `827aa82`. The public raw installer was then fetched and executed against a temporary destination; it downloaded the GitHub archive and returned version `0.1.0`. GitHub authentication was required to push, but npm authentication was not.
+The reviewed files were committed and pushed to `main` at `https://github.com/xonix97/run` in commits `827aa82` and `0977e57`. The public raw installer was fetched and executed against a temporary destination; it downloaded the GitHub archive and returned version `0.1.0`. `npm install --global git+https://github.com/xonix97/run.git` was also tested with an isolated temporary npm prefix and returned version `0.1.0`. GitHub authentication was required to push, but npm authentication was not.
 
 Verify the public commands in a fresh shell:
 
