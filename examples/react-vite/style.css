@@ -1,0 +1,14 @@
+* { box-sizing: border-box; }
+body { margin: 0; min-height: 100vh; background: #0a111b; color: #edf4fb; font-family: system-ui, sans-serif; display: grid; place-items: center; }
+main { width: min(760px, 100%); padding: 72px 48px; }
+.badge { font: 11px ui-monospace, monospace; color: #8fb1c8; letter-spacing: .17em; }
+h1 { font-size: clamp(48px, 9vw, 88px); line-height: 1.06; font-weight: 650; letter-spacing: -.055em; margin: 36px 0 24px; }
+h1 span { color: #79edb2; }
+p { font-size: 18px; line-height: 1.65; max-width: 510px; color: #9cb0c3; }
+pre { padding: 22px 28px; margin: 32px 0 20px; border: 1px solid #273444; background: #111d2a; border-radius: 12px; font-size: 24px; }
+pre span { color: #79edb2; margin-right: 14px; }
+.status { display: flex; align-items: center; gap: 12px; font: 13px ui-monospace, monospace; color: #9bb1c7; }
+.status i { width: 7px; height: 7px; border-radius: 100%; background: #79edb2; }
+button { margin-top: 36px; background: #79edb2; color: #0a211b; border: 0; border-radius: 8px; font: 600 14px system-ui, sans-serif; padding: 14px 20px; cursor: pointer; }
+button:hover { background: #a2f9ca; }
+footer { margin-top: 48px; color: #657d95; font: 12px ui-monospace, monospace; }
