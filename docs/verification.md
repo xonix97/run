@@ -22,19 +22,9 @@
 
 ## Make the public installer live
 
-At implementation time `https://github.com/xonix97/run` existed but contained no files, and this local directory was not a Git checkout. No remote commit or push was performed. From the project root, after reviewing the files:
+The reviewed files were committed and pushed to `main` at `https://github.com/xonix97/run` in commit `827aa82`. The public raw installer was then fetched and executed against a temporary destination; it downloaded the GitHub archive and returned version `0.1.0`. GitHub authentication was required to push, but npm authentication was not.
 
-```bash
-git init -b main
-git add .
-git commit -m "Add run CLI, Windows installer, tests, and screenshots"
-git remote add origin https://github.com/xonix97/run.git
-git push -u origin main
-```
-
-These instructions assume the remote is still empty. If it has since gained commits, clone it and copy the reviewed files into that checkout instead of force-pushing. GitHub authentication is required to push, but npm authentication is not.
-
-Then verify the public commands in a fresh shell:
+Verify the public commands in a fresh shell:
 
 ```powershell
 (iwr -useb https://raw.githubusercontent.com/xonix97/run/main/install.ps1).Content | iex

@@ -54,8 +54,6 @@ run
 - Creates `run.cmd`, so using `run` does not require changing PowerShell's execution policy.
 - Supports rerunning the same command to update, without duplicate PATH entries. A failed update preserves the previous installation.
 
-> The GitHub commands require these files to be present on the repository's `main` branch. They will return 404 while the repository is empty.
->
 > As with any `iwr | iex` installer, review the script before executing downloaded code. This installs the current `main` branch; use a tag or commit for a pinned version. Running a project can execute its package scripts, including dependency install scripts, so only run projects you trust.
 
 #### Download and review first / advanced options
@@ -137,7 +135,7 @@ run -- --host 0.0.0.0            Forward arguments to the detected command
 
 ## Screenshots
 
-These are captures of actual Windows console sessions, not mockups. The installer capture uses a local archive of this checkout because the GitHub repository had not yet been populated. The server capture shows the installed `run` command installing real dependencies and launching Vite; an HTTP request also verified the server returned 200.
+These are captures of actual Windows console sessions, not mockups. The installer capture used a local archive of this checkout before the first GitHub push. The server capture shows the installed `run` command installing real dependencies and launching Vite; an HTTP request also verified the server returned 200.
 
 ### Install and automatic PATH setup
 
